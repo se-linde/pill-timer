@@ -22,8 +22,8 @@ reside in the 'top.php' file
 switch(THIS_PAGE)
 {
   case "index.php":
-  $myTitle = "PHP_HTML_CSS PAGE TEMPLATE";
-  $myPageID = "PHP_HTML_CSS PAGE TEMPLATE";
+  $myTitle = "Timer!";
+  $myPageID = "Timer!";
   break;
   
   case "bio.php":

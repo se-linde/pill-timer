@@ -314,7 +314,8 @@ footer{
 
 @media all and (min-width: 1px) {
     html{
-        background-color:#666;
+        /* Responsive Background Color - changes per app. I want green. */ 
+        background-color:#4C8678;
     }
     
     img.desktop{

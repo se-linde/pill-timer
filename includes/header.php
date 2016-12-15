@@ -23,7 +23,7 @@
 <header> 
         
   <!-- <h2 class="pageid">Home Page</h2> -->
-  <h3><a href="index.php">PHP_HTML_CSS PAGE TEMPLATE</a></h3>
+  <h3><a href="index.php">Timer!</a></h3>
   <!-- START NAVIGATION (Main) -->
     
     

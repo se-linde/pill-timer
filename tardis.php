@@ -45,14 +45,20 @@ function time_elapsed_B($secs){
     }
     
 
-    
-    
 $nowtime = time();
 $oldtime = 1335939007;
+
+$nowtime = time(); 
+$newtime = time() +  + (60 * 60); 
 
 echo "time_elapsed_A: ".time_elapsed_A($nowtime-$oldtime)."<br>"; 
 echo "time_elapsed_B: ".time_elapsed_B($nowtime-$oldtime)."<br>";
 echo "<p></p>"; 
+
+echo "time_future_A: ".time_elapsed_A($newtime - $nowtime)."<br>"; 
+echo "time_future_B: ".time_elapsed_B($newtime - $nowtime)."<br>";
+echo "<p></p>"; 
+
 
 /** Output:
 time_elapsed_A: 6d 15h 48m 19s

@@ -1,33 +1,74 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Time Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/portal.css" />
+</head> 
+
+    
+<body>
+
 <?php include 'includes/header.php';?>    
 
-    
-<h1>Timer!</h1>
+            
+<h1>Time Calculator</h1>
    
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
-<h2>Header Level 2</h2>
+<!-- Here on out is the HTML formatting of the PHP data. --> 
 
-<ol>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ol>
 
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+<main> 
 
-<h3>Header Level 3</h3>
+    <!-- HTML portion of the script. --> 
 
-<ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ul>
+        <h4>This app retrieves the current time, and also tells you the time an hour later. This is useful for times when you have to take medication now, and can't have caffeine for an hour afterwards. This is your brain, Dwayne, whilst you're on those iron meds that can't be taken with caffeine.</h4>
+        <p> 
+            
+    	<form action="" method="post">
+    	<table>
+       
+        	
+        	<tr>
+            	<td>
+                	<input type="submit" name="btn" value="Summon the TARDIS.">
+            	</td>
+        	</tr>
+        	<tr>
+            	<td>
+                	<?php
+                    
+// The switch sends the input to the functions, and produces the output.
+                    
+if(isset($_POST['btn'])) // The form handler.
+{ // show data.
 
-<pre><code>
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
+    $second_temp_type_name=$_POST['second_temp_type_name'];
+    $given_value=$_POST['given_value'];
+                    
+    $timenow = date('h:i:s A'); 
+    $timelater = date('h') + 1 . date(':i:s A'); 
+    $timelater2 = date(':i:s A');
+    $timestring = (string) $timenow; 
+
 }
-</code></pre>
+                    
+                        ?>
+            	</td>
+        	</tr>
+    	</table>
+    	</form>
     
+        
+
+        <p class="error">This is the current time. Take the iron now: <?php echo "$timenow"; ?> </p>
+
+        <p class="error">This is the time an hour later. Don't take caffeine until then: <?php echo "$timelater"; ?> </p>
+
+        
+</main>    
+</body>        
+    
+</html>
+
         
 <?php include 'includes/footer.php';?> 

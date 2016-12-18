@@ -49,7 +49,7 @@ $nowtime = time();
 $oldtime = 1335939007;
 
 $nowtime = time(); 
-$newtime = time() +  + (60 * 60); 
+$newtime = time()  + (60 * 60); 
 
 echo "time_elapsed_A: ".time_elapsed_A($nowtime-$oldtime)."<br>"; 
 echo "time_elapsed_B: ".time_elapsed_B($nowtime-$oldtime)."<br>";

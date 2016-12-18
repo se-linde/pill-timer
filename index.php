@@ -21,7 +21,7 @@
 
     <!-- HTML portion of the script. --> 
 
-        <h4>This app retrieves the current time, and also tells you the time an hour later. This is useful for times when you have to take medication now, and can't have caffeine for an hour afterwards. This is your brain, Dwayne, whilst you're on those iron meds that can't be taken with caffeine.</h4>
+        <h4>This app retrieves the current time, and also tells you the time an hour later. This is useful for times when you have to take medication now, and can't have caffeine for an hour afterwards.</h4>
         <p> 
             
     	<form action="" method="post">
@@ -30,7 +30,7 @@
         	
         	<tr>
             	<td>
-                	<input type="submit" name="btn" value="Summon the TARDIS.">
+                	<input type="submit" name="btn" value="Summon the TARDIS!">
             	</td>
         	</tr>
         	<tr>
@@ -60,7 +60,7 @@ if(isset($_POST['btn'])) // The form handler.
     
         
 
-        <p class="error">This is the current time. Take the iron now: <?php echo "$timenow"; ?> </p>
+        <p class="error">This is the current time. Take the meds now: <?php echo "$timenow"; ?> </p>
 
         <p class="error">This is the time an hour later. Don't take caffeine until then: <?php echo "$timelater"; ?> </p>
 
